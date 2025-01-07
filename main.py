@@ -5,7 +5,7 @@ from producer import *
 
 def main():
     producer = create_producer()
-    topic_name="test-topic"
+    topic_name="kafka"
     message = {
             "message": "hello kafka",
             "timestamp": str(time.time())

@@ -1,5 +1,5 @@
 from .producer import *
-from .main import *
+
 
 __all__ = ['create_producer', 'produce_message']
 

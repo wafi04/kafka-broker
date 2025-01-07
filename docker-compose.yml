@@ -6,7 +6,7 @@ services:
     hostname: kafka
     ports:
       - "9092:9092"
-      - "19092:19092" # Tambahan port
+      - "19092:19092"
     environment:
       - KAFKA_CFG_NODE_ID=0
       - KAFKA_CFG_PROCESS_ROLES=controller,broker
