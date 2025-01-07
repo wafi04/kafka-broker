@@ -28,9 +28,9 @@ def create_topic_confluent(topic_name, num_partitions=1, replication_factor=1):
     }
 
     try:
-        admin =   AdminClient(conf)
-
-        topic = NewTopic(
+        admin =   AdminClient(conf)  # created admin client
+        # admin topice activate
+        topic = NewTopic(  
             topic_name,
             num_partitions=num_partitions,
             replication_factor=replication_factor

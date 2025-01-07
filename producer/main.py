@@ -1,4 +1,4 @@
-from producer import create_producer, produce_message,create_topic_confluent
+from producer import create_producer, produce_message
 import time
 
 if __name__ == "__main__":
