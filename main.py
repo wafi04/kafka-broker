@@ -1,16 +1,15 @@
-from consumer import *
-from database.database  import create_table
-import time
-from producer import *
-
+from database.database import create_table
+from analysis import *
+from  config import *
+from database import *
 def main():
-    producer = create_producer()
-    topic_name="kafka"
-    message = {
-            "message": "hello kafka",
-            "timestamp": str(time.time())
-    }
-    produce_message(producer, topic_name, message)
-    consume_messages(topic_name)
+    try:
+        conn = config_db()
+        
+    except Exception as e:
+        logger.error(f"Error dalam main: {str(e)}")
+        return 1
+    return 0
 
-main()
+if __name__ == "__main__":
+    exit(main())
